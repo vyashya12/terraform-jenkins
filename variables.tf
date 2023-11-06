@@ -12,4 +12,5 @@ variable "api_token" {
 variable "vm_name" {
   description = "Name of VM"
   type        = string
+  default     = "yaashvmfromterrajen"
 }
