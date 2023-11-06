@@ -15,7 +15,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/vyashya12/terra-jenkins'
+                git branch: 'main', credentialsId: 'github_secret', url: 'https://github.com/vyashya12/terra-jenkins'
             }
         }
         stage('Terraform init') {
