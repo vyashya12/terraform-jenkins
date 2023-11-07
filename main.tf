@@ -1,4 +1,4 @@
-resource "vcd_vapp_vm" "terraform-vm-launch" {
+resource "vcd_vapp_vm" {
   vapp_name     = "yash-vApp-provisioner"
   name          = var.vm_name
   org           = "MY1VMC2-DEMO"
@@ -7,7 +7,7 @@ resource "vcd_vapp_vm" "terraform-vm-launch" {
   description   = "The first VM for testing purposes"
 
   catalog_name  = "Templates"
-  template_name = "Ubuntu20TLS"
+  template_name = var.vm_os
   cpus          = 2
   memory        = 2048
 
