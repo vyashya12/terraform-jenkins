@@ -1,4 +1,16 @@
-resource "vcd_vapp_vm" {
+provider "vcd" {
+  url                  = var.vcd_url
+  api_token            = var.api_token
+  allow_unverified_ssl = true
+  user                 = "none"
+  password             = "none"
+  auth_type            = "api_token"
+  sysorg               = "System"
+  org                  = "MY1VMC2-DEMO"
+  vdc                  = "MY1VMC2-DemoVDC"
+}
+
+resource "vcd_vapp_vm" "local_vm_test" {
   vapp_name     = "yash-vApp-provisioner"
   name          = var.vm_name
   org           = "MY1VMC2-DEMO"
