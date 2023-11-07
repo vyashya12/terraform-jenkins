@@ -1,8 +1,7 @@
 terraform {
   backend "s3" {
-    bucket         = "yash-jenkins-bakend-bucke"
-    key            = "main"
-    region         = "ap-southeast-1"
-    dynamodb_table = "yash-lock-dyna-db"
+    bucket = "yash-jenkins-bakend-bucke"
+    key    = "terraform-states"
+    region = "ap-southeast-1"
   }
 }
